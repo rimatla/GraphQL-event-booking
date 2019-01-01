@@ -1,0 +1,36 @@
+# get event
+query {
+  events
+}
+
+# create event mutation
+mutation {
+  createEvent(name: "Travelling")
+}
+
+# create event mutation
+mutation {
+  createEvent(
+    eventInput: {
+      title: "Guy"
+      description: "cool app indeed"
+      price: 9.99
+      date: "2018-12-18T05:21:52.748Z"
+    }
+  ) {
+    # get nested events
+    title
+    price
+    _id
+  }
+}
+
+# create user mutation
+mutation {
+  createUser(
+    userInput: { email: "kesha@gmail.com", password: "097r2hfiekl2" }
+  ) {
+    email
+    password
+  }
+}

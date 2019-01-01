@@ -1,0 +1,42 @@
+***** MongoDB ****
+• MongoDB used _ for ids
+
+***** MongoDB Atlas config ****
+• MongoDB Atlas is a cloud hosted database 
+• Create a free tier cluster on MongoDB Atlas
+• Config settings:
+- Add a at least one user under Security 
+- Add your current local ip address ( Enables localhost connection to DB)
+- Install Mongoose 
+- Set up servers to connet with DB
+
+- Add a nodemmon.json to config an env variable to handle credentials to sign into the database
+- Get a connection string on MongoDB Atlas under 
+Cluster/
+Overview/
+Connect/
+Connect your application/ 
+Short SRV Connection string (For drivers compatible with MongoDB 3.6+)
+- Copy the the String 
+
+
+***** MongoDB Atlas View Created DB ****
+• Cluster/Collections 
+
+
+***** GraphQL ****
+• create input types on Graph ie: input myInput { ... }
+
+
+
+• Mongoose provides a method to transform the object id as string, therefore instead of this (which also works):
+_id: event._doc._id.toString()
+you can also use this:
+_id: event.id
+
+• No nullable password
+If it's coming from the front end user, we want it ie:
+input UserInput {password: String!}
+
+But we don't want to send it back ie:
+type User {password: String!}

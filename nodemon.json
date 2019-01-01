@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGO_USER": "tonki",
+    "MONGO_PASSWORD": "iyKrub9Xax98ssCH",
+    "MONGO_DB": "events-booking-graphQL-dev"
+  }
+}
